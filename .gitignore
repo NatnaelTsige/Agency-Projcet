@@ -27,3 +27,6 @@ README
 integration-tests/gen-scripts/
 /bin/
 *.hprof
+
+__pycache__/
+*.pyc
