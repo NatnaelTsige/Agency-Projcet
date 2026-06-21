@@ -5,24 +5,24 @@
 // ─────────────────────────────────────────────────────────────────────────
 
 export const site = {
-  name: "Evergreen Home Care",
-  shortName: "Evergreen",
+  name: "Resolved Home Care",
+  shortName: "Resolved",
   tagline: "Compassionate in-home senior care",
   description:
     "Trusted, licensed in-home senior care — companionship, personal care, and dementia support delivered with warmth and dignity, right where your loved one feels most at home.",
   // PLACEHOLDER — replace with the real number. `tel` must be digits only (E.164).
-  phoneDisplay: "(555) 010-2400",
-  phoneTel: "+15550102400",
+  phoneDisplay: "(425) 000-0000",
+  phoneTel: "+14250000000",
   email: "care@evergreenhomecare.com",
   // PLACEHOLDER — create a free form at https://formspree.io, then paste its ID
   // here (the part after /f/ in your form's endpoint, e.g. "mzbqlabc").
   formspreeId: "your-form-id",
   address: {
-    line1: "1240 Maple Avenue, Suite 200",
-    line2: "Springfield, OR 97403",
+    line1: "123 Fun Street, Suite 200",
+    line2: "Bellevue, WA 98178",
   },
   hours: "Care available 24/7 · Office Mon–Fri, 8am–6pm",
-  serviceArea: "Springfield, Eugene & the surrounding Willamette Valley",
+  serviceArea: "Bellevue, Seattle & the surrounding Willamette Valley",
   // Trust signals — adjust to the agency's real credentials.
   stats: [
     { value: "15+", label: "Years caring for families" },
