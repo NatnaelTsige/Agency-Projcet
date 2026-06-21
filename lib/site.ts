@@ -14,6 +14,9 @@ export const site = {
   phoneDisplay: "(555) 010-2400",
   phoneTel: "+15550102400",
   email: "care@evergreenhomecare.com",
+  // PLACEHOLDER — create a free form at https://formspree.io, then paste its ID
+  // here (the part after /f/ in your form's endpoint, e.g. "mzbqlabc").
+  formspreeId: "your-form-id",
   address: {
     line1: "1240 Maple Avenue, Suite 200",
     line2: "Springfield, OR 97403",
