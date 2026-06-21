@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ring: 14 116 144; /* primary */
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-ink font-sans antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+    letter-spacing: -0.015em;
+  }
+
+  /* Larger, calmer base type — this audience reads on phones and tablets too. */
+  p {
+    line-height: 1.7;
+  }
+
+  :focus-visible {
+    outline: 3px solid rgb(var(--ring) / 0.9);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  ::selection {
+    background: #0e74904d;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-content px-5 sm:px-8 lg:px-10;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary-soft/60
+           px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-primary-deep;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-full px-7 py-3.5 text-base font-semibold
+           transition-all duration-200 will-change-transform focus-visible:outline-none;
+  }
+  .btn-call {
+    @apply btn bg-cta text-white shadow-soft hover:bg-cta-deep hover:shadow-lift;
+  }
+  .btn-primary {
+    @apply btn bg-primary text-white shadow-soft hover:bg-primary-deep hover:shadow-lift;
+  }
+  .btn-ghost {
+    @apply btn border border-primary/25 bg-white/70 text-primary-deep hover:border-primary/50 hover:bg-white;
+  }
+
+  .card {
+    @apply rounded-4xl border border-ink/5 bg-surface p-7 shadow-soft;
+  }
+
+  /* Subtle dotted texture for warm sections */
+  .dot-grid {
+    background-image: radial-gradient(rgba(14, 116, 144, 0.12) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+}
+
+/* Honor the system preference — no motion for those who ask for none. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
