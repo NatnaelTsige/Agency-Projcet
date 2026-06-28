@@ -4,7 +4,7 @@ import "./globals.css";
 import { site } from "@/lib/site";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { MobileCallBar } from "@/components/mobile-call-bar";
+import { MobileActionBar } from "@/components/mobile-action-bar";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -60,7 +60,7 @@ export default function RootLayout({
           {children}
         </main>
         <SiteFooter />
-        <MobileCallBar />
+        <MobileActionBar />
       </body>
     </html>
   );

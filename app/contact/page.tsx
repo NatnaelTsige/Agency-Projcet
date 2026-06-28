@@ -1,28 +1,33 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
-import { ContactForm } from "@/components/contact-form";
+import { RequestCareForm } from "@/components/request-care-form";
 import { site } from "@/lib/site";
 import { Phone, Mail, MapPin, Clock } from "@/components/icons";
 
 export const metadata: Metadata = {
-  title: "Contact",
-  description: `Call ${site.name} at ${site.phoneDisplay} or request a callback. Free in-home assessments across ${site.serviceArea}.`,
+  title: "Request Care",
+  description: `Request in-home senior care from ${site.name} — tell us when, where, and the type of care you need. Free in-home assessments across ${site.serviceArea}.`,
 };
 
 export default function ContactPage() {
   return (
     <>
       <PageHero
-        eyebrow="Contact us"
-        title="Let's talk about caring for your loved one"
-        subtitle="The fastest way to get answers is to call — a real coordinator will pick up. Prefer we reach out? Send the form and we'll call you back."
+        eyebrow="Request care"
+        title="Tell us what you need — we'll take it from here"
+        subtitle="Share when, where, and the type of care you're looking for. Your request goes straight to our care team, and a coordinator will call to confirm the details. Prefer to talk first? We're one call away."
       />
 
-      <section className="container-x pb-12 sm:pb-16">
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          {/* Phone-first panel */}
+      <section id="request" className="container-x scroll-mt-28 pb-12 sm:pb-16">
+        <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+          {/* Primary action: the request form */}
           <Reveal>
+            <RequestCareForm />
+          </Reveal>
+
+          {/* Secondary: call + contact details */}
+          <Reveal delay={0.1}>
             <div className="flex h-full flex-col gap-6">
               <a
                 href={`tel:${site.phoneTel}`}
@@ -33,7 +38,7 @@ export default function ContactPage() {
                   <span className="grid h-14 w-14 place-items-center rounded-2xl bg-white/15">
                     <Phone className="h-7 w-7" />
                   </span>
-                  <p className="mt-5 text-white/80">Call us now</p>
+                  <p className="mt-5 text-white/80">Prefer to talk? Call us</p>
                   <p className="font-display text-3xl font-semibold sm:text-4xl">{site.phoneDisplay}</p>
                   <p className="mt-2 text-sm text-white/70">{site.hours}</p>
                 </div>
@@ -55,11 +60,6 @@ export default function ContactPage() {
                 </ContactRow>
               </ul>
             </div>
-          </Reveal>
-
-          {/* Callback form */}
-          <Reveal delay={0.1}>
-            <ContactForm />
           </Reveal>
         </div>
       </section>

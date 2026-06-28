@@ -58,14 +58,14 @@ export function Hero() {
           </motion.p>
 
           <motion.div variants={item} className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <a href={`tel:${site.phoneTel}`} className="btn-call !px-8 !py-4 !text-lg">
-              <Phone className="h-5 w-5" />
-              Call {site.phoneDisplay}
-            </a>
-            <Link href="/services" className="btn-ghost !px-7 !py-4 !text-lg">
-              Explore our care
+            <Link href="/contact#request" className="btn-primary !px-8 !py-4 !text-lg">
+              Request care online
               <ArrowRight className="h-5 w-5" />
             </Link>
+            <a href={`tel:${site.phoneTel}`} className="btn-ghost !px-7 !py-4 !text-lg">
+              <Phone className="h-5 w-5" />
+              Or call {site.phoneDisplay}
+            </a>
           </motion.div>
 
           <motion.ul variants={item} className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium text-ink/80">

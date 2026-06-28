@@ -59,10 +59,17 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a href={`tel:${site.phoneTel}`} className="btn-call hidden sm:inline-flex !px-5 !py-2.5 !text-sm">
+          <a
+            href={`tel:${site.phoneTel}`}
+            className="btn-ghost hidden lg:inline-flex !px-4 !py-2.5 !text-sm"
+            aria-label={`Call ${site.phoneDisplay}`}
+          >
             <Phone className="h-4 w-4" />
             <span>{site.phoneDisplay}</span>
           </a>
+          <Link href="/contact#request" className="btn-primary hidden sm:inline-flex !px-5 !py-2.5 !text-sm">
+            Request care
+          </Link>
 
           <button
             type="button"

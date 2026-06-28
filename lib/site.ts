@@ -14,6 +14,10 @@ export const site = {
   phoneDisplay: "(425) 000-0000",
   phoneTel: "+14250000000",
   email: "care@evergreenhomecare.com",
+  // Care requests from the "Request Care" form are emailed here. Delivery is
+  // handled by Formspree — set this same address as the recipient on your
+  // Formspree form in the dashboard so requests land in your work inbox.
+  workEmail: "care@evergreenhomecare.com",
   // PLACEHOLDER — create a free form at https://formspree.io, then paste its ID
   // here (the part after /f/ in your form's endpoint, e.g. "mzbqlabc").
   formspreeId: "your-form-id",

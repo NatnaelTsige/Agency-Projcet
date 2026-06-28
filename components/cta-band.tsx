@@ -4,8 +4,8 @@ import { Reveal } from "./reveal";
 import { Phone, ArrowRight } from "./icons";
 
 export function CtaBand({
-  title = "Ready to talk about care?",
-  body = "Call now to speak with a real care coordinator. No phone trees, no pressure — just a warm conversation about how we can help your family.",
+  title = "Ready to arrange care?",
+  body = "Send a quick request — tell us when, where, and the type of care you need. A coordinator will follow up to confirm every detail. Prefer to talk first? We're one call away.",
 }: {
   title?: string;
   body?: string;
@@ -22,14 +22,14 @@ export function CtaBand({
           <h2 className="font-display text-3xl font-semibold text-white sm:text-5xl">{title}</h2>
           <p className="mx-auto mt-5 max-w-xl text-lg text-white/85">{body}</p>
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <a href={`tel:${site.phoneTel}`} className="btn-call w-full sm:w-auto !px-8 !py-4 !text-lg">
-              <Phone className="h-5 w-5" />
-              Call {site.phoneDisplay}
-            </a>
-            <Link href="/contact" className="btn-ghost w-full sm:w-auto !border-white/40 !bg-white/10 !text-white hover:!bg-white/20">
-              Request a callback
+            <Link href="/contact#request" className="btn-call w-full sm:w-auto !px-8 !py-4 !text-lg">
+              Request care online
               <ArrowRight className="h-5 w-5" />
             </Link>
+            <a href={`tel:${site.phoneTel}`} className="btn-ghost w-full sm:w-auto !border-white/40 !bg-white/10 !text-white hover:!bg-white/20">
+              <Phone className="h-5 w-5" />
+              Or call {site.phoneDisplay}
+            </a>
           </div>
           <p className="mt-5 text-sm text-white/70">{site.hours}</p>
         </div>
