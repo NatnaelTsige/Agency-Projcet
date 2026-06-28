@@ -160,7 +160,7 @@ export function RequestCareForm() {
                 required
                 autoComplete="address-level2"
                 className={fieldClass}
-                placeholder="City or neighborhood (e.g. Springfield, OR)"
+                placeholder="City or neighborhood (e.g. Bellevue, WA)"
               />
             </div>
 

@@ -13,17 +13,19 @@ export default function HomePage() {
     <>
       <Hero />
 
-      {/* Trust stats */}
-      <section className="container-x">
-        <RevealGroup className="grid grid-cols-2 gap-4 rounded-4xl border border-ink/5 bg-surface p-6 shadow-soft sm:p-8 lg:grid-cols-4">
-          {site.stats.map((s) => (
-            <RevealItem key={s.label} className="text-center">
-              <div className="font-display text-4xl font-semibold text-primary sm:text-5xl">{s.value}</div>
-              <div className="mt-1 text-sm text-muted">{s.label}</div>
-            </RevealItem>
-          ))}
-        </RevealGroup>
-      </section>
+      {/* Trust stats — toggle with `showStats` in lib/site.ts */}
+      {site.showStats && (
+        <section className="container-x">
+          <RevealGroup className="grid grid-cols-2 gap-4 rounded-4xl border border-ink/5 bg-surface p-6 shadow-soft sm:p-8 lg:grid-cols-4">
+            {site.stats.map((s) => (
+              <RevealItem key={s.label} className="text-center">
+                <div className="font-display text-4xl font-semibold text-primary sm:text-5xl">{s.value}</div>
+                <div className="mt-1 text-sm text-muted">{s.label}</div>
+              </RevealItem>
+            ))}
+          </RevealGroup>
+        </section>
+      )}
 
       {/* Services preview */}
       <section className="container-x py-20 sm:py-28">
@@ -90,7 +92,7 @@ export default function HomePage() {
             align="left"
             eyebrow="Why families choose us"
             title="The warmth of family, the standards of professionals"
-            body="We've spent over a decade earning the trust of families across the valley. Here's what that means for yours."
+            body="Everything we do is built to earn the trust of families across Bellevue — here's what that means for yours."
           />
           <RevealGroup className="grid gap-5 sm:grid-cols-2">
             {values.map((v) => (
@@ -106,30 +108,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="relative overflow-hidden bg-primary-deep py-20 text-white sm:py-28">
-        <div className="dot-grid absolute inset-0 opacity-15" aria-hidden />
-        <div className="container-x relative">
-          <Reveal className="mx-auto max-w-2xl text-center">
-            <span className="eyebrow !border-white/20 !bg-white/10 !text-white">Families we serve</span>
-            <h2 className="mt-4 font-display text-3xl font-semibold sm:text-4xl lg:text-[2.75rem]">
-              Stories from the people who trust us
-            </h2>
-          </Reveal>
-          <RevealGroup className="mt-12 grid gap-5 lg:grid-cols-3">
-            {testimonials.map((t) => (
-              <RevealItem key={t.name} className="flex h-full flex-col rounded-4xl bg-white/10 p-7 backdrop-blur">
-                <Quote className="h-9 w-9 text-accent" />
-                <p className="mt-4 flex-1 text-lg leading-relaxed text-white/90">{t.quote}</p>
-                <div className="mt-6 border-t border-white/15 pt-4">
-                  <div className="font-display text-lg font-semibold">{t.name}</div>
-                  <div className="text-sm text-white/65">{t.role}</div>
-                </div>
-              </RevealItem>
-            ))}
-          </RevealGroup>
-        </div>
-      </section>
+      {/* Testimonials — toggle with `showTestimonials` in lib/site.ts */}
+      {site.showTestimonials && (
+        <section className="relative overflow-hidden bg-primary-deep py-20 text-white sm:py-28">
+          <div className="dot-grid absolute inset-0 opacity-15" aria-hidden />
+          <div className="container-x relative">
+            <Reveal className="mx-auto max-w-2xl text-center">
+              <span className="eyebrow !border-white/20 !bg-white/10 !text-white">Families we serve</span>
+              <h2 className="mt-4 font-display text-3xl font-semibold sm:text-4xl lg:text-[2.75rem]">
+                Stories from the people who trust us
+              </h2>
+            </Reveal>
+            <RevealGroup className="mt-12 grid gap-5 lg:grid-cols-3">
+              {testimonials.map((t) => (
+                <RevealItem key={t.name} className="flex h-full flex-col rounded-4xl bg-white/10 p-7 backdrop-blur">
+                  <Quote className="h-9 w-9 text-accent" />
+                  <p className="mt-4 flex-1 text-lg leading-relaxed text-white/90">{t.quote}</p>
+                  <div className="mt-6 border-t border-white/15 pt-4">
+                    <div className="font-display text-lg font-semibold">{t.name}</div>
+                    <div className="text-sm text-white/65">{t.role}</div>
+                  </div>
+                </RevealItem>
+              ))}
+            </RevealGroup>
+          </div>
+        </section>
+      )}
 
       {/* FAQ */}
       <section className="container-x py-20 sm:py-28">

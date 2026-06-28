@@ -18,7 +18,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="Our story"
         title="Founded on a simple promise: care we'd want for our own parents"
-        subtitle={`For over 15 years, ${site.name} has helped families across ${site.serviceArea} keep their loved ones safe, comfortable, and thriving at home.`}
+        subtitle={`${site.name} helps families across ${site.serviceArea} keep their loved ones safe, comfortable, and thriving at home.`}
       />
 
       {/* Story + portrait */}
@@ -29,7 +29,7 @@ export default function AboutPage() {
               <div className="dot-grid absolute inset-0 opacity-20" aria-hidden />
               <div className="absolute inset-0 flex items-end p-8">
                 <p className="font-display text-2xl font-semibold leading-snug text-white">
-                  “We started Evergreen after struggling to find care for our own mother. We knew families deserved better.”
+                  “We started {site.shortName} after struggling to find care for our own mother. We knew families deserved better.”
                 </p>
               </div>
             </div>
@@ -44,9 +44,9 @@ export default function AboutPage() {
                 dependable.
               </p>
               <p>
-                Today, our team of {site.stats[1].value} caregivers brings that same family-first standard to every
-                home we enter. We match caregivers by personality, train them rigorously, and stay reachable around the
-                clock — because peace of mind shouldn't keep office hours.
+                That same family-first standard guides every home we enter. We match caregivers by personality, train
+                them rigorously, and stay reachable around the clock — because peace of mind shouldn't keep office
+                hours.
               </p>
               <p className="font-medium text-ink">
                 Every plan we write starts with one question: <em>what would help this person live well, today?</em>
@@ -56,17 +56,19 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="container-x py-8">
-        <RevealGroup className="grid grid-cols-2 gap-4 rounded-4xl bg-primary p-8 text-white sm:grid-cols-4">
-          {site.stats.map((s) => (
-            <RevealItem key={s.label} className="text-center">
-              <div className="font-display text-4xl font-semibold sm:text-5xl">{s.value}</div>
-              <div className="mt-1 text-sm text-white/75">{s.label}</div>
-            </RevealItem>
-          ))}
-        </RevealGroup>
-      </section>
+      {/* Stats — toggle with `showStats` in lib/site.ts */}
+      {site.showStats && (
+        <section className="container-x py-8">
+          <RevealGroup className="grid grid-cols-2 gap-4 rounded-4xl bg-primary p-8 text-white sm:grid-cols-4">
+            {site.stats.map((s) => (
+              <RevealItem key={s.label} className="text-center">
+                <div className="font-display text-4xl font-semibold sm:text-5xl">{s.value}</div>
+                <div className="mt-1 text-sm text-white/75">{s.label}</div>
+              </RevealItem>
+            ))}
+          </RevealGroup>
+        </section>
+      )}
 
       {/* Values */}
       <section className="container-x py-20 sm:py-28">

@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 };
 
 const openings = [
-  { role: "Caregiver / Home Health Aide", type: "Full-time & Part-time", area: "Springfield · Eugene" },
-  { role: "Certified Nursing Assistant (CNA)", type: "Full-time", area: "Willamette Valley" },
-  { role: "Overnight / Live-in Caregiver", type: "Flexible shifts", area: "Springfield" },
+  { role: "Caregiver / Home Health Aide", type: "Full-time & Part-time", area: "Bellevue · Seattle" },
+  { role: "Certified Nursing Assistant (CNA)", type: "Full-time", area: "Puget Sound area" },
+  { role: "Overnight / Live-in Caregiver", type: "Flexible shifts", area: "Bellevue" },
   { role: "Care Coordinator", type: "Full-time", area: "Office + field" },
 ];
 

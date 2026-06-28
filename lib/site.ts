@@ -26,8 +26,15 @@ export const site = {
     line2: "Bellevue, WA 98178",
   },
   hours: "Care available 24/7 · Office Mon–Fri, 8am–6pm",
-  serviceArea: "Bellevue, Seattle & the surrounding Willamette Valley",
-  // Trust signals — adjust to the agency's real credentials.
+  serviceArea: "Bellevue & the surrounding Puget Sound area",
+  // ── SECTION TOGGLES ──────────────────────────────────────────────────
+  // New agency with nothing to show yet? Set a flag to `false` to hide that
+  // section everywhere it appears. Flip it back to `true` once you have real
+  // numbers or reviews to list — no other code changes needed.
+  showStats: false, //  the "15+ years / 120+ caregivers…" stats band (Home + About pages)
+  showTestimonials: true, //  the "Stories from the people who trust us" section (Home page)
+  // ─────────────────────────────────────────────────────────────────────
+  // Trust signals — shown only when `showStats` above is true.
   stats: [
     { value: "15+", label: "Years caring for families" },
     { value: "120+", label: "Caregivers on our team" },

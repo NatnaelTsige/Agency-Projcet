@@ -116,7 +116,7 @@ export function Hero() {
             reduce={!!reduce}
             icon={<span className="font-display text-lg font-bold text-accent">4.9★</span>}
             title="Loved by families"
-            subtitle="Across the valley"
+            subtitle="Around Bellevue"
           />
         </motion.div>
       </div>

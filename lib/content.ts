@@ -103,21 +103,21 @@ export const steps = [
 export const testimonials = [
   {
     quote:
-      "From the first phone call, Evergreen treated my mother like family. Her caregiver, Maria, has become someone she genuinely looks forward to seeing every day.",
+      "From the first phone call, Resolved treated my mother like family. Her caregiver, Maria, has become someone she genuinely looks forward to seeing every day.",
     name: "Sandra P.",
-    role: "Daughter of a client, Eugene",
+    role: "Daughter of a client, Bellevue",
   },
   {
     quote:
       "After Dad's stroke we were overwhelmed. They built a plan in days, matched us with a caregiver who understood him, and stayed reachable around the clock.",
     name: "James & Lori T.",
-    role: "Family caregivers, Springfield",
+    role: "Family caregivers, Bellevue",
   },
   {
     quote:
       "The dementia training is real. They keep my husband calm and engaged on days I simply can't, and they keep me informed without ever making me feel judged.",
     name: "Eleanor M.",
-    role: "Wife & primary caregiver",
+    role: "Wife & primary caregiver, Bellevue",
   },
 ] as const;
 
